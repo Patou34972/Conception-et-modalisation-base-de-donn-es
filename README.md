@@ -96,13 +96,13 @@ CREATE TABLE peut_détenir(
     distance INT NOT NULL,
     periode_de_revolution INT NOT NULL
 );
- ```
+  ```
 2.
     ```SQL
-      CREATE TABLE planet_type (
-       id INT PRIMARY KEY,
-       type VARCHAR(255) NOT NULL
-   );
+    CREATE TABLE planet_type (
+    id INT PRIMARY KEY,
+    type VARCHAR(255) NOT NULL
+ );
    ```
 
 ### Radars d'exercice
