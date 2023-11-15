@@ -98,12 +98,12 @@ CREATE TABLE peut_détenir(
 );
  ```
 2.
- ```SQL
-CREATE TABLE planet_type (
-    id INT PRIMARY KEY,
-    type VARCHAR(255) NOT NULL
-);
-```
+    ```SQL
+      CREATE TABLE planet_type (
+       id INT PRIMARY KEY,
+       type VARCHAR(255) NOT NULL
+   );
+   ```
 
 ### Radars d'exercice
 1.
