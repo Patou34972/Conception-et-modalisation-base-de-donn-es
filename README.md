@@ -28,6 +28,7 @@ peut_détenir = (#Id_Joueurs, #Id_Items);
 
 ### SQL
 
+```SQL
 CREATE TABLE Cartes(
    Id_Cartes COUNTER,
    nom_de_la_carte VARCHAR(20),
@@ -85,3 +86,60 @@ CREATE TABLE peut_détenir(
    FOREIGN KEY(Id_Joueurs) REFERENCES Joueurs(Id_Joueurs),
    FOREIGN KEY(Id_Items) REFERENCES Items(Id_Items)
 );
+```
+### Exercice planètes
+1.
+    ```SQL
+   CREATE TABLE planetes (
+    id INT PRIMARY KEY,
+    nom VARCHAR(255) NOT NULL,
+    distance INT NOT NULL,
+    periode_de_revolution INT NOT NULL
+);
+ ```
+2.
+ ```SQL
+CREATE TABLE planet_type (
+    id INT PRIMARY KEY,
+    type VARCHAR(255) NOT NULL
+);
+```
+
+### Radars d'exercice
+1.
+```SQL
+SELECT Département, SUM(Nombre_de_dossiers_dinfractions) AS total_dossiers_infractions
+FROM radars
+GROUP BY Département;
+```
+2.
+```SQL
+SELECT Nom_de_la_voie, SUM(Nombre_de_dossiers_dinfractions) AS total_dossiers_infractions_autoroute
+FROM radars
+WHERE  Nom_de_la_voie LIKE 'A%'
+GROUP BY Nom_de_la_voie 
+ORDER BY total_dossiers_infractions_autoroute DESC
+LIMIT 1;
+```
+```SQL
+SELECT Nom_de_la_voie, SUM(Nombre_de_dossiers_dinfractions) AS total_dossiers_infractions_autoroute
+FROM radars
+WHERE  Nom_de_la_voie LIKE 'RD%'
+GROUP BY Nom_de_la_voie 
+ORDER BY total_dossiers_infractions_autoroute DESC
+LIMIT 1;
+```
+3.
+```SQL
+SELECT
+    id,
+    Nom_de_la_voie,
+    AVG(Nombre_de_dossiers_dinfractions) AS moyenne_infractions_par_radar,
+    AVG(Nombre_de_dossiers_dinfractions) * (YEAR(CURRENT_DATE) - YEAR(date_de_mise_en_service) + 1) AS total_infractions_sur_duree_service
+FROM
+    radars
+GROUP BY
+    id, Nom_de_la_voie
+ORDER BY
+    total_infractions_sur_duree_service DESC;
+```
