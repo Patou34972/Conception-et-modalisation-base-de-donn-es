@@ -1,6 +1,6 @@
 # Conception-et-modalisation-base-de-donn-es
 
-### TP réaliser avec Patrice Elie Dit Cosaque
+### TP réalisé avec Chantal GUILLAUME
 
 ### Dictionnaire des données
 
