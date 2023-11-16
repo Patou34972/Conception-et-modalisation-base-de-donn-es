@@ -114,12 +114,9 @@ GROUP BY Département;
 ```
 2.
 ```SQL
-SELECT Nom_de_la_voie, SUM(Nombre_de_dossiers_dinfractions) AS total_dossiers_infractions_autoroute
-FROM radars
-WHERE  Nom_de_la_voie LIKE 'A%'
-GROUP BY Nom_de_la_voie 
-ORDER BY total_dossiers_infractions_autoroute DESC
-LIMIT 1;
+select Nom_de_la_voie, sum(Nombre_de_dossiers_dinfractions) as Total_dossier_infractions 
+from radars where Nom_de_la_voie like 'A%' and substr(Nom_de_la_voie,2,1) between 1 and 9
+group by Nom_de_la_voie order by Total_dossier_infractions desc limit 1;
 ```
 ```SQL
 SELECT Nom_de_la_voie, SUM(Nombre_de_dossiers_dinfractions) AS total_dossiers_infractions_autoroute
