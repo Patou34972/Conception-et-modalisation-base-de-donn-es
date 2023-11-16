@@ -95,7 +95,7 @@ CREATE TABLE peut_détenir(
     nom VARCHAR(255) NOT NULL,
     distance INT NOT NULL,
     periode_de_revolution INT NOT NULL
-);
+   );
   ```
 2.
     ```SQL
