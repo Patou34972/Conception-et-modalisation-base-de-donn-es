@@ -143,6 +143,13 @@ INSERT INTO `moons`(`id`, `nom`, `id_planete_orbite`) VALUES (5, 'Amalthea', 2);
 
   ```SQL
 # 5.
+SELECT p.nom, count(*) as moons from planetes p, moons m 
+where p.id = m.id_planete_orbite  
+group by  m.id_planete_orbite order by m.id_planete_orbite desc;
+  ```
+
+  ```SQL
+# 6.
   ```
 
 ### Radars d'exercice
