@@ -162,7 +162,7 @@ GROUP BY Département;
 # 2.
 ```SQL
 select Nom_de_la_voie, sum(Nombre_de_dossiers_dinfractions) as Total_dossier_infractions 
-from radars where Nom_de_la_voie like 'A%' and substr(Nom_de_la_voie,2,1) between 1 and 9
+from radars where Nom_de_la_voie regexp '^A[0-9]' and substr(Nom_de_la_voie,2,1) between 1 and 9
 group by Nom_de_la_voie order by Total_dossier_infractions desc limit 1;
 ```
 ```SQL
