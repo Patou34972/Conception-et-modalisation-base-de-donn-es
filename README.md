@@ -106,12 +106,18 @@ INSERT INTO `planete`(`id`, `nom`, `distance`, `periode_de_revolution`) VALUES (
 INSERT INTO `planete`(`id`, `nom`, `distance`, `periode_de_revolution`) VALUES (4, 'Neptune', 4504300, 60190);
 INSERT INTO `planete`(`id`, `nom`, `distance`, `periode_de_revolution`) VALUES (5, 'Pluto', 5913520, 90550);
   ```
+
+   ```SQL
 3.
-    ```SQL
+   
   CREATE TABLE planet_type (
   id int PRIMARY KEY NOT NULL AUTO_INCREMENT
   , type varchar(255) NOT NULL
 );
+
+INSERT INTO `planet_type`(`id`, `type`) VALUES (1, 'Etoile');
+INSERT INTO `planet_type`(`id`, `type`) VALUES (2, 'planete tellurique');
+INSERT INTO `planet_type`(`id`, `type`) VALUES ('3', 'Planete gazeuse');
   ```
 
 ### Radars d'exercice
