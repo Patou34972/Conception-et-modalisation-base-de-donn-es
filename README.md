@@ -128,7 +128,22 @@ UPDATE planetes SET type=3 WHERE nom in ('Jupiter');
   ```
   ```SQL
 # 4.
+CREATE TABLE moons (
+  id int PRIMARY KEY NOT NULL AUTO_INCREMENT
+  , nom varchar(255) NOT null
+  , id_planete_orbite int
+) ;
+
+INSERT INTO `moons`(`id`, `nom`, `id_planete_orbite`) VALUES (1, 'Phobos', 3);
+INSERT INTO `moons`(`id`, `nom`, `id_planete_orbite`) VALUES (2, 'Deimos', 4);
+INSERT INTO `moons`(`id`, `nom`, `id_planete_orbite`) VALUES (3, 'Metis', 2);
+INSERT INTO `moons`(`id`, `nom`, `id_planete_orbite`) VALUES (4, 'Adrastea', 6);
+INSERT INTO `moons`(`id`, `nom`, `id_planete_orbite`) VALUES (5, 'Amalthea', 2);
    ```
+
+  ```SQL
+# 5.
+  ```
 
 ### Radars d'exercice
 # 1.
