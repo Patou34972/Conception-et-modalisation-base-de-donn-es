@@ -88,17 +88,23 @@ CREATE TABLE peut_détenir(
 );
 ```
 ### Exercice planètes
-1.
+ 
    ```SQL
+1.
    CREATE DATABASE `solar_system`;
-     ```
-    ```SQL
+    
    CREATE TABLE planetes (
     id INT PRIMARY KEY,
     nom VARCHAR(255) NOT NULL,
     distance INT NOT NULL,
     periode_de_revolution INT NOT NULL
    );
+
+INSERT INTO `planete`(`id`, `nom`, `distance`, `periode_de_revolution`) VALUES (1, 'Jupiter', 778330, 4332.71);
+INSERT INTO `planete`(`id`, `nom`, `distance`, `periode_de_revolution`) VALUES (2, 'Saturn', 1429400, 10759.5);
+INSERT INTO `planete`(`id`, `nom`, `distance`, `periode_de_revolution`) VALUES (3, 'Uranus', 2870990, 30685);
+INSERT INTO `planete`(`id`, `nom`, `distance`, `periode_de_revolution`) VALUES (4, 'Neptune', 4504300, 60190);
+INSERT INTO `planete`(`id`, `nom`, `distance`, `periode_de_revolution`) VALUES (5, 'Pluto', 5913520, 90550);
   ```
 3.
     ```SQL
