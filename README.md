@@ -100,11 +100,11 @@ CREATE TABLE peut_détenir(
     periode_de_revolution INT NOT NULL
    );
 
-INSERT INTO `planete`(`id`, `nom`, `distance`, `periode_de_revolution`) VALUES (1, 'Jupiter', 778330, 4332.71);
-INSERT INTO `planete`(`id`, `nom`, `distance`, `periode_de_revolution`) VALUES (2, 'Saturn', 1429400, 10759.5);
-INSERT INTO `planete`(`id`, `nom`, `distance`, `periode_de_revolution`) VALUES (3, 'Uranus', 2870990, 30685);
-INSERT INTO `planete`(`id`, `nom`, `distance`, `periode_de_revolution`) VALUES (4, 'Neptune', 4504300, 60190);
-INSERT INTO `planete`(`id`, `nom`, `distance`, `periode_de_revolution`) VALUES (5, 'Pluto', 5913520, 90550);
+INSERT INTO `planetes`(`id`, `nom`, `distance`, `periode_de_revolution`) VALUES (1, 'Jupiter', 778330, 4332.71);
+INSERT INTO `planetes`(`id`, `nom`, `distance`, `periode_de_revolution`) VALUES (2, 'Saturn', 1429400, 10759.5);
+INSERT INTO `planetes`(`id`, `nom`, `distance`, `periode_de_revolution`) VALUES (3, 'Uranus', 2870990, 30685);
+INSERT INTO `planetes`(`id`, `nom`, `distance`, `periode_de_revolution`) VALUES (4, 'Neptune', 4504300, 60190);
+INSERT INTO `planetes`(`id`, `nom`, `distance`, `periode_de_revolution`) VALUES (5, 'Pluto', 5913520, 90550);
   ```
 
    ```SQL
@@ -121,10 +121,10 @@ INSERT INTO `planet_type`(`id`, `type`) VALUES ('3', 'Planete gazeuse');
   ```
   ```SQL
 # 3.
-ALTER table planete add type int;
+ALTER table planetes add type int;
 
-UPDATE planete SET type=2 WHERE nom in ('Mercury','Venus','Eath','Mars');
-UPDATE planete SET type=3 WHERE nom in ('Jupiter');
+UPDATE planetes SET type=2 WHERE nom in ('Mercury','Venus','Eath','Mars');
+UPDATE planetes SET type=3 WHERE nom in ('Jupiter');
   ```
   ```SQL
 # 4.
