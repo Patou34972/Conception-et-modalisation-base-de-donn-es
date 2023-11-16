@@ -90,7 +90,7 @@ CREATE TABLE peut_détenir(
 ### Exercice planètes
  
    ```SQL
-1.
+# 1.
    CREATE DATABASE `solar_system`;
     
    CREATE TABLE planetes (
@@ -108,7 +108,7 @@ INSERT INTO `planete`(`id`, `nom`, `distance`, `periode_de_revolution`) VALUES (
   ```
 
    ```SQL
-3.
+# 2.
    
   CREATE TABLE planet_type (
   id int PRIMARY KEY NOT NULL AUTO_INCREMENT
@@ -121,13 +121,13 @@ INSERT INTO `planet_type`(`id`, `type`) VALUES ('3', 'Planete gazeuse');
   ```
 
 ### Radars d'exercice
-1.
+# 1.
 ```SQL
 SELECT Département, SUM(Nombre_de_dossiers_dinfractions) AS total_dossiers_infractions
 FROM radars
 GROUP BY Département;
 ```
-2.
+# 2.
 ```SQL
 select Nom_de_la_voie, sum(Nombre_de_dossiers_dinfractions) as Total_dossier_infractions 
 from radars where Nom_de_la_voie like 'A%' and substr(Nom_de_la_voie,2,1) between 1 and 9
@@ -141,7 +141,7 @@ GROUP BY Nom_de_la_voie
 ORDER BY total_dossiers_infractions_autoroute DESC
 LIMIT 1;
 ```
-3.
+# 3.
 ```SQL
 SELECT
     id,
