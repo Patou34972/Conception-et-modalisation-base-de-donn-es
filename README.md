@@ -89,6 +89,9 @@ CREATE TABLE peut_détenir(
 ```
 ### Exercice planètes
 1.
+   ```SQL
+   CREATE DATABASE `solar_system`;
+     ```
     ```SQL
    CREATE TABLE planetes (
     id INT PRIMARY KEY,
@@ -97,7 +100,7 @@ CREATE TABLE peut_détenir(
     periode_de_revolution INT NOT NULL
    );
   ```
-2.
+3.
     ```SQL
     CREATE TABLE planet_type (
     id INT PRIMARY KEY,
