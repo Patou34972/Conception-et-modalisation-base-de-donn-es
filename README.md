@@ -119,6 +119,16 @@ INSERT INTO `planet_type`(`id`, `type`) VALUES (1, 'Etoile');
 INSERT INTO `planet_type`(`id`, `type`) VALUES (2, 'planete tellurique');
 INSERT INTO `planet_type`(`id`, `type`) VALUES ('3', 'Planete gazeuse');
   ```
+  ```SQL
+# 3.
+ALTER table planete add type int;
+
+UPDATE planete SET type=2 WHERE nom in ('Mercury','Venus','Eath','Mars');
+UPDATE planete SET type=3 WHERE nom in ('Jupiter');
+  ```
+  ```SQL
+# 4.
+   ```
 
 ### Radars d'exercice
 # 1.
