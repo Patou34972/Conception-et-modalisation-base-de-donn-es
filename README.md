@@ -102,11 +102,11 @@ CREATE TABLE peut_détenir(
   ```
 3.
     ```SQL
-    CREATE TABLE planet_type (
-    id INT PRIMARY KEY,
-    type VARCHAR(255) NOT NULL
-    );
-   ```
+  CREATE TABLE planet_type (
+  id int PRIMARY KEY NOT NULL AUTO_INCREMENT
+  , type varchar(255) NOT NULL
+);
+  ```
 
 ### Radars d'exercice
 1.
